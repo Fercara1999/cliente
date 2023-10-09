@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+    <h1>Plantilla</h1>
+    <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        .divSquare{
+            width: 49%; height: 30%; margin: 3px; border: 1px solid black; float: left; 
+        }
+    </style>
+    <div class="divSquare">
+        Introduce cuantas filas quieres que tenga tu rombo: 
+        <input type="number" id="n1">
+        <input type="button" id="b1" value="Crear rombo" onclick="creaRombo()">
+    </div>
+    <div class="divSquare" id="ds2"></div>
+    
+    <script src="js/funciones.js"></script>
+</body>
+</html>

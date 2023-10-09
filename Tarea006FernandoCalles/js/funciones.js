@@ -27,7 +27,7 @@ function generaRomboLineasPar(){
       resultado+="&nbsp";
     }
     for(let asteriscos = 1; asteriscos <= i*2-1 ; asteriscos++){
-      if (asteriscos != 1){
+      if (asteriscos != 1 && asteriscos != i*2-1){
         resultado+="&nbsp";
       }else{
       resultado+="*";
@@ -38,11 +38,16 @@ function generaRomboLineasPar(){
   //Generación de la parte de abajo
   for(let i = lineasPar ; i >= 1 ; i--){
     for(let espacios = 0 ; espacios < lineasPar-i ; espacios++){
-      resultado+='&nbsp';
+      resultado+="&nbsp";
     }
     for(let asteriscos = i*2-1 ; asteriscos >= 1 ; asteriscos--){
-      resultado+="*";
+      if(asteriscos != 1 && asteriscos != i*2-1){
+        resultado+="&nbsp";
+      }else{
+        resultado+="*";
+      }  
     }
+
     resultado+="<br>";
   }
 
@@ -63,22 +68,34 @@ function generaRomboLineasImpar(){
       resultado+="&nbsp";
     }
     for(let asteriscos = 1; asteriscos <= i*2-1 ; asteriscos++){
-      resultado+="*";
+      if(asteriscos != 1 && asteriscos != i*2-1){
+        resultado+="&nbsp";
+      }else{
+        resultado+="*";
+      }
     }
     resultado+="<br>";
   }
   //Generación de la línea intermedia
   for(let m = 1 ; m <= nLineas ; m++){
-    resultado+= "*";
+    if(m != 1 && m != nLineas ){
+      resultado+="&nbsp";
+    }else{
+      resultado+= "*";
+    }
   }
   resultado+="<br>";
   //Generación de la parte de abajo
   for(let i = lineasImpar ; i >= 1 ; i--){
     for(let espacios = 0 ; espacios <= lineasImpar-i ; espacios++){
-      resultado+='&nbsp';
+      resultado+="&nbsp";
     }
     for(let asteriscos = i*2-1 ; asteriscos >= 1 ; asteriscos--){
-      resultado+="*";
+      if(asteriscos!=1 && asteriscos !=i*2-1){
+        resultado+="&nbsp";
+      }else{
+        resultado+="*";
+      }
     }
     resultado+="<br>";
   }
